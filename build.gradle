@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
+apply from: file('../dependence.gradle')
 
 android {
-    compileSdkVersion 27
-
+    compileSdkVersion compileSdkVer
+    buildToolsVersion buildToolsVer
 
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 27
+        minSdkVersion minSdkVer
+        targetSdkVersion targetSdkVer
         versionCode 1
         versionName "1.0"
 
@@ -33,3 +34,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.code.gson:gson:2.8.1'
 }
+
+apply from: file('../bintray.gradle')
